@@ -14,7 +14,7 @@ db.sequelize
 	.sync()
 	.then(() => {
 		app.listen(PORT, () => {
-			console.log(`http://localhost:${PORT}/`);
+			console.log(`SERVER LIVE @ http://localhost:${PORT}/`);
 		});
 	})
 	.catch((err) => {
