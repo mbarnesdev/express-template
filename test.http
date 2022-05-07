@@ -1,0 +1,11 @@
+###
+POST http://localhost:3005/users/
+
+###
+GET http://localhost:3005/users/
+
+###
+PATCH http://localhost:3005/users/
+
+###
+DELETE http://localhost:3005/users/
