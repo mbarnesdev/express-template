@@ -1,5 +1,11 @@
 ###
 POST http://localhost:3005/users/
+content-type: application/json
+
+{
+    "username": "thebled23",
+    "password": "red_wedding"
+}
 
 ###
 GET http://localhost:3005/users/
