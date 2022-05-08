@@ -5,15 +5,11 @@ const postUser = async (req, res) => {
 
 	await User.create({ username: username, password: password })
 		.then(() => {
-			res.status(200).json({
-				success: 'true',
-				username: username,
-				password: password,
-			});
+			res.status(200).send();
 		})
 		.catch((err) => {
 			console.error(err);
-			res.status(404).json({ action: 'Could not create user.' });
+			res.status(404).send();
 		});
 };
 

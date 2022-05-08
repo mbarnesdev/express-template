@@ -3,15 +3,30 @@ POST http://localhost:3005/users/
 content-type: application/json
 
 {
-    "username": "thebled23",
+    "username": "staticdress34",
     "password": "red_wedding"
 }
 
 ###
 GET http://localhost:3005/users/
+content-type: application/json
+
+{
+    "username": "staticdress34"
+}
 
 ###
 PATCH http://localhost:3005/users/
+content-type: application/json
 
+{
+    "username": "thebled23",
+    "newPassword": "youknowhosseatbelt"
+}
 ###
 DELETE http://localhost:3005/users/
+content-type: application/json
+
+{
+    "username": "thebled23"
+}
