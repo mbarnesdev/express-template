@@ -7,7 +7,7 @@ const getUser = async (req, res) => {
 	if (foundUser === null) {
 		res.status(404).json({ password: 'No user found.' });
 	} else {
-		res.status(404).json({ password: foundUser.password });
+		res.status(200).json({ password: foundUser.password });
 	}
 };
 
