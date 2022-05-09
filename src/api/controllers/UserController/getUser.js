@@ -1,16 +1,14 @@
 const { User } = require('../../models');
 
 const getUser = async (req, res) => {
-	const { username } = req.body;
+	const username = req.query.username;
 
-	await User.findAll({ where: { username: username } })
-		.then(() => {
-			res.status(200).send();
-		})
-		.catch((err) => {
-			console.error(err);
-			res.status(404).send();
-		});
+	const foundUser = await User.findOne({ where: { username: username } });
+	if (foundUser === null) {
+		res.status(404).json({ password: 'No user found.' });
+	} else {
+		res.status(404).json({ password: foundUser.password });
+	}
 };
 
 module.exports = getUser;

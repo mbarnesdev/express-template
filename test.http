@@ -8,12 +8,7 @@ content-type: application/json
 }
 
 ###
-GET http://localhost:3005/users/
-content-type: application/json
-
-{
-    "username": "staticdress34"
-}
+GET http://localhost:3005/users?username=thebled23
 
 ###
 PATCH http://localhost:3005/users/
